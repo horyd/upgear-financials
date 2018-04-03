@@ -23,7 +23,7 @@ export default {
     const balances = accumulation.map((a, i) => a - payment);
 
     return {
-      balances,
+      balances: [...balances, fee],
       payment,
     };
   },
@@ -41,7 +41,7 @@ export default {
     const balances = amortisation.map((a, i) => a + payment);
 
     return {
-      balances,
+      balances: [...balances, 0],
       payment,
     };
   },

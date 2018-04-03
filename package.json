@@ -1,6 +1,6 @@
 {
   "name": "upgear-financials",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The Financial Calculations behind Upgear",
   "main": "lib/library.js",
   "scripts": {

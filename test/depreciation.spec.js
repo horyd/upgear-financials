@@ -7,7 +7,8 @@ describe('Depreciation Schedule', function () {
     const rv = 600;
     const operatingLife = 48;
     const writeOffMonths = 36;
-    const basicDepn = depreciationSchedule(rrp, rv, operatingLife, writeOffMonths);
+    const depreciationPower = 4;
+    const basicDepn = depreciationSchedule(rrp, rv, depreciationPower, operatingLife, writeOffMonths);
 
     expect(basicDepn[0]).to.equal(rrp);
     expect(basicDepn[operatingLife]).to.equal(rv);

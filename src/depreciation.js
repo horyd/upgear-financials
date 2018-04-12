@@ -1,5 +1,6 @@
 export default (rrp, rv, depreciationPower, operatingLife, writeOffMonths, age = 0) => {
   const depnInWriteOffPeriod = rv / writeOffMonths;
+
   // linear
   // const k = 2 * ((rrp - rv) - (rv / writeOffMonths * (operatingLife - age))) / (operatingLife - age)**2;
   // parabolic

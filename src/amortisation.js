@@ -28,10 +28,13 @@ export default function (
   ));
 
   if (!distributionBaseIsValid) {
-    throw new Error(`
+    const e = new Error(`
       You have too many months with reduced payments, or they are too bunched
       together. Please edit your payment schedule.
     `);
+
+    e.name = 'ScheduleError';
+    throw e;
   }
 
   const exactDistribution = longDistribution.slice(startingMonth, startingMonth + term);
